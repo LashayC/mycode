@@ -18,14 +18,9 @@ def main():
     # convert JSON to pythonic data
     data = resp.json()
 
-    # display python data with pprint
-    print(data)
-    pprint(data)
+    #loop over data
+    for item in data.get("zodiac_animals"):
+        pprint(item)
     
-    #convert to yaml
-    yaml_data = yaml.dump(data, explicit_start = True, default_flow_style = False)
-    print(yaml_data)
-
-
 if __name__ == "__main__":
     main()
